@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:controls ="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="Ejer2_2Michelle.MainPage">
+
+    <StackLayout>
+
+        <Frame BackgroundColor="Bisque" Margin="0,0,0,0" Padding="0,0,0,0">
+            <Label Text="Realizacion de firma" 
+                   HorizontalOptions="CenterAndExpand" 
+                   FontSize="30"
+                   TextColor="CadetBlue"/>
+        </Frame>
+
+        <controls:SignaturePadView x:Name="Sign"
+                                   StrokeWidth="2"
+                                   Margin="0,50,0,0"
+                                   WidthRequest="350"
+                                   HeightRequest="380"
+                                   StrokeColor="#6F6F6F"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Start"
+                                   />
+
+        <Entry x:Name="txtName"
+               Keyboard="Text"
+               Placeholder="Nombre"
+               HorizontalTextAlignment="Center"
+               Margin="0,20,0,0"
+               />
+
+        <Entry x:Name="txtDescription"
+               Keyboard="Text"
+               Placeholder="Descripcion"
+               HorizontalTextAlignment="Center"
+               Margin="0,40,0,0"
+               />
+
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="0,20,0,0">
+            <Button Text="firmas Guardadas" 
+                    x:Name="btnlistar" 
+                    BackgroundColor="Bisque" 
+                    HorizontalOptions="StartAndExpand"
+                    Clicked="btnlistar_Clicked" />
+
+            <Button Text="Guardar en sqlite" 
+                    x:Name="btnsalvar" 
+                    BackgroundColor="Bisque" 
+                    HorizontalOptions="EndAndExpand" 
+                    Clicked="btnsalvar_Clicked"/>
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
